@@ -7,9 +7,11 @@ const MainLayout = () => {
         <div>
             {/* Header area */}
             <Header></Header>
-            
+
             {/* Outlet area */}
-            <Outlet></Outlet>
+            <div className="max-w-6xl mx-auto">
+                <Outlet></Outlet>
+            </div>
 
             {/* footer area */}
             <Footer></Footer>
