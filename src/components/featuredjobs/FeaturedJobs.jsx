@@ -3,6 +3,7 @@ import SingleFeatureJob from "../singleFeatureJob/SingleFeatureJob";
 
 const FeaturedJobs = () => {
     const [featuredJobs, setFeaturedJobs] = useState([]);
+    const [cardDisplay, setCardDisplay] = useState(4);
 
     useEffect(() => {
         fetch('jobs.json')
@@ -19,9 +20,15 @@ const FeaturedJobs = () => {
         
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-12">
                 {
-                    featuredJobs?.map(singeJobs => <SingleFeatureJob key={singeJobs.id}
+                    featuredJobs?.slice(0,cardDisplay).map(singeJobs => <SingleFeatureJob key={singeJobs.id}
                     singeJobs={singeJobs}></SingleFeatureJob>)
                 }
+            </div>
+
+            <div className={`text-center mt-10 ${cardDisplay === featuredJobs.length && 'hidden' } `}>
+                <button className="btn btn-primary normal-case"
+                    onClick={()=> setCardDisplay(featuredJobs.length)}
+                >Show all jobs</button>
             </div>
         </div>
     );

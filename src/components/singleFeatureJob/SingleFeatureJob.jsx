@@ -5,7 +5,7 @@ import { MdLocationOn } from "react-icons/md";
 
 
 const SingleFeatureJob = ({singeJobs}) => {
-    const {logo, job_title, company_name, remote_or_onsite, job_type, salary, location } = singeJobs;
+    const {id, logo, job_title, company_name, remote_or_onsite, job_type, salary, location } = singeJobs;
     return (
         <div>
             <div className="card card-compact bg-base-100 border-stone-200 border py-4 px-4">
@@ -22,8 +22,7 @@ const SingleFeatureJob = ({singeJobs}) => {
                         <h2 className="flex text-[#757575] text-lg font-semibold"><AiOutlineDollarCircle className="text-2xl mr-2"></AiOutlineDollarCircle>Salary: { salary }</h2>
                     </div>
                    <div className="card-actions mt-5 mb-8">
-                        {/* <Link to={`/jobDetails/${id}`} className="btn btn-primary normal-case">View Details</Link> */}
-                        <button className="btn btn-primary normal-case">View Details</button>
+                        <Link  to={`/featureDetails/${id}`}  className="btn btn-primary normal-case">View Details</Link>
                     </div>
                 </div>
             </div>
