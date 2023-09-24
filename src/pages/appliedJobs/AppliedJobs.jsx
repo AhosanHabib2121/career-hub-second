@@ -46,14 +46,14 @@ const AppliedJobs = () => {
             </div>
             <div>
                 <div className="text-right">
-                    <details className="dropdown dropdown-left mb-10">
-                        <summary className="m-1 btn normal-case">Filter by</summary>
-                        <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+                    <div className="dropdown dropdown-left mb-10">
+                        <label tabIndex={0} className="btn m-1 normal-case">Filter by</label>
+                        <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                             <li onClick={() => handleJobsFilter('all')}><a>All</a></li>
                             <li onClick={() => handleJobsFilter('remote')}><a>Remote</a></li>
                             <li onClick={() => handleJobsFilter('onsite')}><a>onsite</a></li>
                         </ul>
-                    </details>
+                    </div>
                 </div>
                 <div className=" mb-12 space-y-8">
                     {

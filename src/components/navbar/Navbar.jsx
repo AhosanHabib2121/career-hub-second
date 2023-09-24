@@ -27,7 +27,7 @@ const Navbar = () => {
     </>
   )
   return (
-    <div className="navbar bg-base-100 max-w-6xl mx-auto">
+    <div className="navbar bg-base-100 max-w-6xl mx-auto py-4">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -54,7 +54,7 @@ const Navbar = () => {
             {link}
           </ul>
         </div>
-        <a className="normal-case text-xl font-extrabold">Career Hub</a>
+        <a className="normal-case text-2xl font-extrabold">Career Hub</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -63,7 +63,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <a className="btn normal-case">Star Applying</a>
       </div>
     </div>
   )
